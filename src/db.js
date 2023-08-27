@@ -3,10 +3,10 @@ import Dexie from "dexie";
 
 export const db = new Dexie("streamingApp");
 db.version(1).stores({
-  addons: "++id,name,url,description",
-  movies: "++id,title,genre,releaseYear,rating,duration,url,thumbnail",
-  tvShows: "++id,title,genre,releaseYear,rating,numSeasons,url,thumbnail",
-  users: "++id,username,email,hashedPassword",
+  addons: "++id,&name,url,description, file",
+  movies: "++id,&title,genre,releaseYear,rating,duration,url,thumbnail",
+  tvShows: "++id,&title,genre,releaseYear,rating,numSeasons,url,thumbnail",
+  users: "++id,&username,email,hashedPassword",
   userFavorites: "++id,userId,movieId,tvShowId",
   watchedShows: "++id,userId,tvShowId,lastWatchedSeason,lastWatchedEpisode",
 });

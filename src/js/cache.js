@@ -1,5 +1,5 @@
 export const cacheFile = async (fileUrl) => {
-    const cacheName = "libs-cache";
+    const cacheName = "plugin-cache";
     const cache = await caches.open(cacheName);
     const response = await fetch(fileUrl);
     const blob = await response.blob();

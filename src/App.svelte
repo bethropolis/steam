@@ -2,6 +2,7 @@
   import Settings from "./lib/settings.svelte";
   import { active } from "./store.js";
   import Navigation from "./lib/navigation.svelte";
+  import Main from "./lib/main.svelte";
 </script>
 
 <main>
@@ -10,6 +11,9 @@
     {#if $active}
       {#if $active === "settings"}
         <Settings />
+      {/if}
+      {#if $active === "movies"}
+       <Main/>
       {/if}
     {/if}
   </div>
